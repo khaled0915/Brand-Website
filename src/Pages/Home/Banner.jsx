@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const Banner = () => {
@@ -5,7 +6,9 @@ const Banner = () => {
         <div>
 
 
-<div className="hero min-h-screen" style={{backgroundImage: 'url(https://i.ibb.co/42q4K0N/altumcode-Ui3z-Mjp-Mrm-M-unsplash.jpg)'}}>
+<div className="hero min-h-screen" 
+
+style={{backgroundImage: 'url(https://i.ibb.co/42q4K0N/altumcode-Ui3z-Mjp-Mrm-M-unsplash.jpg)'}} >
 
 
   <div className="hero-overlay bg-opacity-40"></div>
@@ -19,9 +22,9 @@ const Banner = () => {
 
 
       
-      <button className="btn mt-10 btn-primary">
+      <Link to='/register'> <button className="btn mt-10 btn-primary">
         
-        Get Started </button>
+        Get Started </button> </Link>
     </div>
   </div>
 </div>
