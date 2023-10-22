@@ -1,3 +1,4 @@
+import Navbar from "../Home/Navbar";
 
 const AddProduct = () => {
 
@@ -65,7 +66,9 @@ const AddProduct = () => {
 
 
     return (
-        <div>
+        <div className="bg-orange-100">
+
+            <Navbar></Navbar>
 
             <h3 className="mt-10 mb-10  bg-green-400 underline text-3xl font=bold text-center text-orange-600 "> Add Your desired Product in the Form given below </h3>
 
@@ -201,7 +204,7 @@ const AddProduct = () => {
 
 
         <div className="form-control mt-6">
-          <button type="submit" className="btn btn-outline btn-warning" > ADD </button>
+          <button type="submit" className="btn  btn-accent" > ADD </button>
         </div>
       </form>
     </div>
