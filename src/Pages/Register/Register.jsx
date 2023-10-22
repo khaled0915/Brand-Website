@@ -31,12 +31,8 @@ const Register = () => {
 
         backgroundSize: 'cover'
     
-    }
-
-        
-        
-        
-        }>
+    }}
+    >
 
             <Navbar></Navbar>
 
@@ -87,7 +83,7 @@ const Register = () => {
 
         <p className="mt-5 text-cyan-800 font-bold hover:underline "> already register ? 
 
-        <Link to='/login' className="ml-10 font-bold hover:text-green-500 text-white"> login </Link>
+        <Link to='/login' className="ml-10 font-bold hover:text-green-500 text-yellow-400"> login </Link>
         
          </p>
 

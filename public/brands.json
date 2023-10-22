@@ -1,0 +1,35 @@
+
+     [
+      {
+        "id": 1,
+        "brandName": "Apple",
+        "brandImage": "https://i.ibb.co/njk3RFr/intro-1650830667.webp"
+      },
+      {
+        "id": 2,
+        "brandName": "Samsung",
+        "brandImage": "https://i.ibb.co/nPff8cL/samsung-trademark-deal.webp"
+      },
+      {
+        "id": 3,
+        "brandName": "Google",
+        "brandImage": "https://i.ibb.co/NNd70Vj/Screen-Shot-2015-09-01-at-16-54-09.png"
+      },
+      {
+        "id": 4,
+        "brandName": "xiaomi",
+        "brandImage": "https://i.ibb.co/SPyp6XM/Xiaomi-logo-PNG2.png"
+      },
+      {
+        "id": 5,
+        "brandName": "Sony",
+        "brandImage": "https://i.ibb.co/SJJfdZ0/Sony-Logo-PNG4.png"
+      },
+      {
+        "id": 6,
+        "brandName": "Microsoft",
+        "brandImage": "https://i.ibb.co/Hzzx5c7/f-HBA4cnn-UNMz7pet6-GVp-Se-1200-80-jpg.webp"
+      }
+    ]
+  
+  
