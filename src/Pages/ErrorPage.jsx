@@ -24,7 +24,7 @@ className="hero min-h-screen bg-base-200">
       <h1 className="text-7xl font-bold text-red-400"> Oops!!! </h1>
       <p className="py-6 font-semibold text-black text-2xl"> Page not Found </p>
 
-      <Link to='/'> <button className="btn btn-warning"> Go to Home  </button> </Link>
+      <Link to='/'> <button className="btn btn-warning "> Go to Home  </button> </Link>
 
     </div>
   </div>

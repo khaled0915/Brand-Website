@@ -161,10 +161,13 @@ const AddProduct = () => {
 <select name="type" className="select select-bordered">
 <option className="underline text-orange-400" disabled selected>Pick one</option>
 <option>Phone</option>
-<option>Computer</option>
+<option>Laptop</option>
 <option>headPhone</option>
 <option> Mouse </option>
 <option> Watches </option>
+<option> Camera </option>
+<option> Tv </option>
+<option>  PlayStation   </option>
 </select>
 
 </div>

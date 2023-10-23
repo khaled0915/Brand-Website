@@ -1,17 +1,32 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 
 const Navbar = () => {
 
-  const {logOut , user } = useContext(AuthContext);
+  const {logOut , user ,  handleGoogleSignIn } = useContext(AuthContext);
 
   const handleSignOut = () => {
     
     logOut()
     .then()
     .catch()
+  }
+  const [User , setUser] = useState(null);
+
+  const  handleGoogleBtn = (auth , googleProvider) =>{
+
+    handleGoogleSignIn(auth , googleProvider)
+    .then(result => {
+      const loggedUser = result.user ;
+      console.log(loggedUser);
+      setUser(loggedUser);
+          
+    })
+    .catch(error =>{
+      console.error(error);
+    })
   }
 
 
@@ -35,7 +50,7 @@ const Navbar = () => {
 
 
 
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-base-100 flex flex-col md:flex-row">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -56,16 +71,103 @@ const Navbar = () => {
     
     </ul>
   </div>
-  <div className="navbar-end">
 
+
+  <div className="dropdown navbar-end ">
+
+
+  <label 
+  
+  tabIndex={0} className="btn ml-8 ">
+
+
+<button className=" btn-outline btn-success"> Login  </button>
+
+  </label>
+
+
+  <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box ">
+    <li>
+      
+      
+      <a>
+
+      <div>
     {
       user ? 
       <button onClick={handleSignOut} className="btn btn-outline btn-success">SignOut</button>
       :
       <Link to='/login'> <button className="btn btn-accent">Login</button></Link>
     }
+    </div>
+
+
+
+      </a>
+      
+      </li>
+
+
+    <li><a>
+
+
+    <div>
+
+
+{
+  User 
+
+  ?
+
+  <div>
+
+<button onClick={handleGoogleBtn } className="btn btn-xs btn-success hidden  ml-5"> Login With Google </button>
+    <h3 className="text-xs font-bold text-red-800 ">
+      User : {User.displayName}
+       </h3>
+       <img className="rounded-full w[60px] h-[50px] mx-auto " src={User.photoURL} alt="" />
+
+
 
   </div>
+
+  :
+
+  <button className="btn  btn-success" onClick={handleGoogleBtn}> Login with Google </button>
+
+
+
+  
+
+  
+
+  
+
+}
+
+</div>
+      
+      
+      
+      
+      </a>
+      
+      
+      
+      </li>
+
+
+  </ul>
+
+
+
+</div>
+
+
+
+
+
+
 </div>
     );
 };
