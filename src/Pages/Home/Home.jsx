@@ -1,7 +1,8 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import Banner from "./Banner";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
+import BrandsCard from "./BrandsCard";
 
 
 const Home = () => {
@@ -27,6 +28,15 @@ const Home = () => {
             <div className="grid mt-10 gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
 
                 {
+                    brands.map(brand =>
+                         <BrandsCard 
+                         key={brand.id}
+                          brand={brand} >
+                            
+                          </BrandsCard>)
+                }
+
+                {/* {
                     brands.map( brand => 
 
                         <div key={brand.id} className="card  bg-base-100 shadow-xl">
@@ -35,14 +45,19 @@ const Home = () => {
 
   
 
+
+
 <div className="lg:tooltip" data-tip="Go to Details">
-<a className="link link-secondary"> 
+
+    <Link to={`/brands/${id}`}> <a className="link link-secondary"> 
    
    <h2 className="font-bold text-xl hover:uppercase  text-orange-600 text-center ">
       {brand.brandName}
   
     </h2>
-   </a>
+   </a> </Link>
+
+
 </div>
   
     
@@ -53,7 +68,7 @@ const Home = () => {
                         
                         
                         )
-                }
+                } */}
             </div>
 
 

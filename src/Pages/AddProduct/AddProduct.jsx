@@ -1,5 +1,9 @@
 import Navbar from "../Home/Navbar";
 
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
+
 const AddProduct = () => {
 
 
@@ -50,6 +54,7 @@ const AddProduct = () => {
         .then(res => res.json())
         .then(data => {
             console.log(data);
+            toast.success('You successfully added the Product')
         })
 
 
@@ -66,65 +71,80 @@ const AddProduct = () => {
 
 
     return (
-        <div className="bg-orange-100">
-
-            <Navbar></Navbar>
-
-            <h3 className="mt-10 mb-10  bg-green-400 underline text-3xl font=bold text-center text-orange-600 "> Add Your desired Product in the Form given below </h3>
 
 
-            <div className=" ">
 
-  <div className="hero-content flex-col ">
+        <> 
 
-    <div className="text-center lg:text-left">
-
-      <h1 className="text-5xl font-bold underline text-pink-600 mb-10"> Add Product </h1>
-    
-    </div>
-
-    <div className=" w-full  shadow-2xl ">
-        
-      <form onSubmit={handleAddProduct} className="">
-
-        {/* name */}
-
-        <div className="form-control">
-
-          <label className="label">
-            <span className="label-text">name</span>
-          </label>
-          <input type="text" placeholder="product name" name='name' className="input input-bordered" required />
-
-        </div>
+<Navbar></Navbar>
 
 
-        {/* image */}
+<h3 className="mt-10 mb-10 bg-green-200 rounded-full underline text-3xl font=bold text-center text-yellow-600 "> Add Your desired Product in the Form given below </h3>
 
 
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text">image</span>
-          </label>
-          <input type="text" name='image' placeholder="img URL" className="input input-bordered" required />
-          <label className="label">
-            
-          </label>
-        </div>
 
 
-        {/* brand name */}
+<div className="bg-orange-100">
 
 
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text">Brand Name</span>
-          </label>
-          <input type="text" name='brandName' placeholder="brand Name" className="input input-bordered" required />
-          <label className="label">
-            
-          </label>
-        </div>
+
+
+
+
+
+
+<div className=" ">
+
+<div className="hero-content flex-col ">
+
+<div className="text-center lg:text-left">
+
+<h1 className="text-5xl font-bold underline text-pink-600 mb-10"> Add Product </h1>
+
+</div>
+
+<div className=" w-full  shadow-2xl ">
+
+<form onSubmit={handleAddProduct} className="">
+
+{/* name */}
+
+<div className="form-control">
+
+<label className="label">
+<span className="label-text">name</span>
+</label>
+<input type="text" placeholder="product name" name='name' className="input input-bordered" required />
+
+</div>
+
+
+{/* image */}
+
+
+<div className="form-control">
+<label className="label">
+<span className="label-text">image</span>
+</label>
+<input type="text" name='image' placeholder="img URL" className="input input-bordered" required />
+<label className="label">
+
+</label>
+</div>
+
+
+{/* brand name */}
+
+
+<div className="form-control">
+<label className="label">
+<span className="label-text">Brand Name</span>
+</label>
+<input type="text" name='brandName' placeholder="brand Name" className="input input-bordered" required />
+<label className="label">
+
+</label>
+</div>
 
 
 
@@ -134,19 +154,19 @@ const AddProduct = () => {
 
 
 <div className="form-control w-full max-w-xs">
-  <label className="label">
-    <span className="label-text">Pick the Type of products </span>
-    <span className="label-text-alt"></span>
-  </label>
-  <select name="type" className="select select-bordered">
-    <option className="underline text-orange-400" disabled selected>Pick one</option>
-    <option>Phone</option>
-    <option>Computer</option>
-    <option>headPhone</option>
-    <option> Mouse </option>
-    <option> Watches </option>
-  </select>
-  
+<label className="label">
+<span className="label-text">Pick the Type of products </span>
+<span className="label-text-alt"></span>
+</label>
+<select name="type" className="select select-bordered">
+<option className="underline text-orange-400" disabled selected>Pick one</option>
+<option>Phone</option>
+<option>Computer</option>
+<option>headPhone</option>
+<option> Mouse </option>
+<option> Watches </option>
+</select>
+
 </div>
 
 
@@ -154,38 +174,38 @@ const AddProduct = () => {
 
 
 <div className="form-control">
-          <label className="label">
-            <span className="label-text"> Price </span>
-          </label>
-          <input type="text" name='price' placeholder="price" className="input input-bordered" required />
-          <label className="label">
-            
-          </label>
-        </div>
+<label className="label">
+<span className="label-text"> Price </span>
+</label>
+<input type="text" name='price' placeholder="price" className="input input-bordered" required />
+<label className="label">
+
+</label>
+</div>
 
 
-        {/* short desc */}
+{/* short desc */}
 
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text"> Short description </span>
-          </label>
-          <input type="text" name='desc' placeholder="short desc" className="input input-bordered" required />
-          <label className="label">
-            
-          </label>
-        </div>
+<div className="form-control">
+<label className="label">
+<span className="label-text"> Short description </span>
+</label>
+<input type="text" name='desc' placeholder="short desc" className="input input-bordered" required />
+<label className="label">
+
+</label>
+</div>
 
 
-        {/* rating */}
+{/* rating */}
 
-        <div className="rating">
+<div className="rating">
 
-  <input type="radio" name="rating" className="mask mask-star-2 bg-orange-400" />
-  <input type="radio" name="rating" className="mask mask-star-2 bg-orange-400" checked />
-  <input type="radio" name="rating" className="mask mask-star-2 bg-orange-400" />
-  <input type="radio" name="rating" className="mask mask-star-2 bg-orange-400" />
-  <input type="radio" name="rating" className="mask mask-star-2 bg-orange-400" />
+<input type="radio" name="rating" className="mask mask-star-2 bg-orange-400" />
+<input type="radio" name="rating" className="mask mask-star-2 bg-orange-400" checked />
+<input type="radio" name="rating" className="mask mask-star-2 bg-orange-400" />
+<input type="radio" name="rating" className="mask mask-star-2 bg-orange-400" />
+<input type="radio" name="rating" className="mask mask-star-2 bg-orange-400" />
 </div>
 
 
@@ -203,18 +223,38 @@ const AddProduct = () => {
 
 
 
-        <div className="form-control mt-6">
-          <button type="submit" className="btn  btn-accent" > ADD </button>
-        </div>
-      </form>
-    </div>
-  </div>
+<div className="form-control mt-6">
+<button type="submit" className="btn  btn-accent" >
+
+    <ToastContainer></ToastContainer>
+    
+     ADD </button>
+</div>
+</form>
+</div>
+</div>
 </div>
 
 
 
-            
-        </div>
+
+</div>
+        
+        
+        
+        
+        
+         </>
+
+        
+        
+        
+        
+        
+
+
+
+        
     );
 };
 
