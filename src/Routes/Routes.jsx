@@ -37,17 +37,7 @@ const routes = createBrowserRouter([
                 element : <PrivateRoute> <AddProduct></AddProduct> </PrivateRoute>
             },
 
-            // {
-            //     path : '/brands/brand/:brand_name',
-            //     element :  <BrandsDetails></BrandsDetails> ,
-            //     loader : ({params}) => fetch(`http://localhost:5000/product/brand/${params.brand_name}`)
-            // },
-            // {
-            //     path : '/brands/brand/:id' ,
-            //     element : <ProductDetail> </ProductDetail>,
-
-            //     loader : ({params}) => fetch(`http://localhost:5000/product/brand/${params.id}`)
-            // }
+           
 
             {
                 path: '/brands/:brand_name',
@@ -57,7 +47,7 @@ const routes = createBrowserRouter([
 
               {
                 path: '/product/:id',
-                element: <ProductDetail></ProductDetail>,
+                element: <PrivateRoute> <ProductDetail></ProductDetail> </PrivateRoute>,
 
                 loader: () => fetch('http://localhost:5000/product')
               }

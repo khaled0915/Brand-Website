@@ -3,6 +3,10 @@ import { Link, useLoaderData, useParams } from "react-router-dom";
 import ProductDetailInfo from "./ProductDetailInfo";
 import Navbar from "../Home/Navbar";
 
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const ProductDetail = () => {
 
@@ -23,6 +27,42 @@ const ProductDetail = () => {
 
     
     console.log(ProductDetails);
+
+    const [addedProduct , setAddedProduct] = useState({
+
+        name : 'name',
+        price : 'price'
+    });
+
+
+    const HandleAddToCart = (id) => {
+
+        fetch(`http://localhost:5000/product/${addedProduct.id}` , {
+            method : 'POST' ,
+            headers : {
+                'Content-Type' : 'application/json' 
+            },
+            body : JSON.stringify(addedProduct)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            toast.success('you successfully added the product')
+
+        })
+        
+
+
+
+
+
+
+
+
+
+
+
+    }
 
     useEffect( ()=> {
 
@@ -52,7 +92,7 @@ const ProductDetail = () => {
         <div>
             <Navbar></Navbar>
 
-      <h3 className="text-2xl font-semibold mb-4">This is the product detail page</h3>
+      <h3 className="text-2xl text-center  underline font-semibold mb-4">This is the product detail page</h3>
       <div className="bg-white rounded-lg shadow-lg p-4">
         {showProduct ? (
 
@@ -62,7 +102,7 @@ const ProductDetail = () => {
 <div className="card-body">
 
 
-  <h2 className="card-title mx-auto mb-5 font-bold text-cyan-200 underline">
+  <h2 className="card-title mx-auto mb-5 font-bold text-cyan-800 underline">
 
     {showProduct.name}
 
@@ -70,8 +110,8 @@ const ProductDetail = () => {
   </h2>
 
   <p className="text-center ">
-            <span className="font-bold text-xl text-red-200 underline mr-5">Price :</span>
-            <span className="font-bold text-xl text-cyan-300">{showProduct.price}</span>
+            <span className="font-bold text-xl text-red-500 underline mr-5">Price :</span>
+            <span className="font-bold text-xl text-cyan-600">{showProduct.price}</span>
           </p>
 
 
@@ -88,7 +128,7 @@ const ProductDetail = () => {
 
   <p className="text-center font-bold text-3xl underline mt-3 text-yellow-500 ">  Description   </p> 
 
-  <p className="text-gray-300 text-center">
+  <p className="text-blue-500 text-center">
 
    
     
@@ -97,9 +137,11 @@ const ProductDetail = () => {
 
   <div className="card-actions justify-end">
 
+
+{/* add to cart button  */}
    
 
-    <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg badge badge-outline mx-auto mt-10 bg-orange-600 font-bold text-white p-3 hover:text-blue-600 ">Add to Cart</button>
+    <button onClick={ () =>  HandleAddToCart(id)} className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg badge badge-outline mx-auto mt-10 bg-orange-600 font-bold text-white p-3 hover:text-blue-600 ">Add to Cart</button>
 
    
 
