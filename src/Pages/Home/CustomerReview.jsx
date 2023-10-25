@@ -58,9 +58,17 @@ const CustomerReview = () => {
 
         <>
 
-<div className='rounded-lg mt-20'>
+<div className='rounded-lg mt-20 flex flex-col md:flex-row'>
 
-      {
+
+    <div>
+    <img className='w-[550px] h-[450px]' src="https://i.ibb.co/gPSYs85/undraw-reviews-lp8w.png" alt="" />
+    </div>
+
+    <div>
+
+
+    {
       
       customerReviewsData.map((review) => (
         <div key={review.id} className="border p-4 my-4 flex items-center">
@@ -93,6 +101,11 @@ const CustomerReview = () => {
       )
       )
       }
+
+    </div>
+
+      
+
     </div>
         
         

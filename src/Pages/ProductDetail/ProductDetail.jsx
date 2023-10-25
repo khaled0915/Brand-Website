@@ -37,7 +37,7 @@ const ProductDetail = () => {
 
     const HandleAddToCart = (id) => {
 
-        fetch(`http://localhost:5000/product/${addedProduct.id}` , {
+        fetch(`https://brand-server-rho.vercel.app/${addedProduct.id}` , {
             method : 'POST' ,
             headers : {
                 'Content-Type' : 'application/json' 

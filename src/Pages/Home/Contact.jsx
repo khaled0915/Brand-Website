@@ -4,13 +4,35 @@ const Contact = () => {
     return (
 
 
-        <div className="py-16  m-10   bg-gray-100">
+        
+
+
+        <div className="py-16     bg-gray-100">
+
+
+            
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center underline text-lime-500 mb-6">Contact with Us</h2>
-          <p className="text-gray-600 text-center mb-8">
+
+
+            <div className='flex flex-col md:flex-row gap-10'>
+
+            <div className='flex-1'>
+        <h2 className="text-3xl font-bold text-center underline text-lime-500 mb-6">Contact with Us</h2>
+        <p className="text-gray-600 text-center mb-8">
             Have questions, feedback, or need assistance? Contact us through the
             options below.
           </p>
+        </div>
+
+        <div className='flex-1'>
+        <img src="https://i.ibb.co/ZmHffHn/undraw-Contact-us-re-4qqt.png" alt="" />
+        </div>
+
+            </div>
+
+       
+          
+          
 
           <div className="grid m-5 grid-cols-1 md:grid-cols-2 gap-8">
             <div>
@@ -46,9 +68,23 @@ const Contact = () => {
 
 
 
-            <div className="text-white mx-auto mt-10 ">
-                <h2 className="font-bold text-orange-600 ml-5"> Give us Review </h2>
-            <textarea className="textarea textarea-accent" placeholder="Review"></textarea>
+            <div className="text-white gap-20  flex mx-auto mt-10 ">
+
+
+             <div className='flex-1'>
+             <img src="https://i.ibb.co/ncfPN9g/undraw-Join-re-w1lh.png" alt="" />
+             </div>
+
+               
+{/* 
+            <textarea className="textarea textarea-accent" placeholder="Review"></textarea> */}
+
+<div className='flex-1'>
+<h2 className="font-bold text-orange-600 ml-5"> Give us Review </h2>
+
+<input type="text" placeholder="Type here" className="input input-bordered input-accent w-full max-w-xs" />
+</div>
+
             </div>
 
 

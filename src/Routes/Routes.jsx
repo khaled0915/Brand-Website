@@ -8,6 +8,7 @@ import AddProduct from "../Pages/AddProduct/AddProduct";
 import PrivateRoute from "./PrivateRoute";
 import BrandsDetails from "../Pages/BrandsDetails/BrandsDetails";
 import ProductDetail from "../Pages/ProductDetail/ProductDetail";
+import UpdatedProduct from "../UpdatedProduct/UpdatedProduct";
 
 const routes = createBrowserRouter([
 
@@ -42,15 +43,16 @@ const routes = createBrowserRouter([
             {
                 path: '/brands/:brand_name',
                 element: <BrandsDetails></BrandsDetails>,
-                loader: ({ params }) => fetch(`http://localhost:5000/product/${params.brand_name}`)
+                loader: ({ params }) => fetch(`https://brand-server-rho.vercel.app/${params.brand_name}`)
               },
 
               {
                 path: '/product/:id',
                 element: <PrivateRoute> <ProductDetail></ProductDetail> </PrivateRoute>,
 
-                loader: () => fetch('http://localhost:5000/product')
-              }
+                loader: () => fetch('https://brand-server-rho.vercel.app')
+              },
+            
               
            
             

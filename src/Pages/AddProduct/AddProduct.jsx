@@ -44,7 +44,7 @@ const AddProduct = () => {
 
         // send data to the server 
 
-        fetch('http://localhost:5000/product' , {
+        fetch('https://brand-server-rho.vercel.app' , {
             method : 'POST' ,
             headers : {
                 'Content-Type' : 'application/json'
@@ -79,7 +79,7 @@ const AddProduct = () => {
 <Navbar></Navbar>
 
 
-<h3 className="mt-10 mb-10 bg-green-200 rounded-full underline text-3xl font=bold text-center text-yellow-600 "> Add Your desired Product in the Form given below </h3>
+<h3 className="mt-10 mb-10 bg-green-200 rounded-lg underline text-3xl font=bold text-center text-orange-600 "> Add Your desired Product in the Form given below </h3>
 
 
 
@@ -99,7 +99,7 @@ const AddProduct = () => {
 
 <div className="text-center lg:text-left">
 
-<h1 className="text-5xl font-bold underline text-pink-600 mb-10"> Add Product </h1>
+<h1 className="text-5xl font-bold underline text-pink-700 mb-10"> Add Product </h1>
 
 </div>
 

@@ -47,7 +47,7 @@ ${
             
 isDarkMode ? 
 
-'bg-gray-600 text-white'
+'bg-black text-white'
 
 
 

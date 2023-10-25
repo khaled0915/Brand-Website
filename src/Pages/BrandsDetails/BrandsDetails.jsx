@@ -173,7 +173,7 @@ const BrandsDetails = () => {
             <Link to={`/product/${brandDetail._id}`}> <button className="btn btn-accent mr-10">Details</button> </Link>
 
 
-            <button className="btn btn-primary">Update</button>
+             <button className="btn btn-primary">Update</button> 
           </div>
         </div>
       </div>
