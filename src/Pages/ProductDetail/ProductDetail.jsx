@@ -23,10 +23,10 @@ const ProductDetail = () => {
     const params  = useParams();
     console.log(params);
 
-    const ProductDetails = useLoaderData();
+    const productDetails = useLoaderData();
 
     
-    console.log(ProductDetails);
+    console.log(productDetails);
 
     const [addedProduct , setAddedProduct] = useState({
 
@@ -68,7 +68,7 @@ const ProductDetail = () => {
 
 
 
-        const SelectedProduct =  ProductDetails.find( product => product._id === id )
+        const SelectedProduct =  productDetails.find( product => product._id === id )
 
         if(SelectedProduct){
             setShowProduct(SelectedProduct);
@@ -82,7 +82,7 @@ const ProductDetail = () => {
 
 
 
-    } , [id , ProductDetails] )
+    } , [id , productDetails] )
     console.log(showProduct);
 
 
@@ -93,6 +93,7 @@ const ProductDetail = () => {
             <Navbar></Navbar>
 
       <h3 className="text-2xl text-center  underline font-semibold mb-4">This is the product detail page</h3>
+
       <div className="bg-white rounded-lg shadow-lg p-4">
         {showProduct ? (
 

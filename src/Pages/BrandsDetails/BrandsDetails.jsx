@@ -170,7 +170,7 @@ const BrandsDetails = () => {
           <div className="card-actions justify-center mt-10">
 
 
-            <Link to={`/product/${brandDetail._id}`}> <button className="btn btn-accent mr-10">Details</button> </Link>
+            <Link to={`/products/${brandDetail._id}`}> <button className="btn btn-accent mr-10">Details</button> </Link>
 
 
              <button className="btn btn-primary">Update</button> 
