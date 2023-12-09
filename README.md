@@ -30,8 +30,8 @@ TechPlusHub is designed to provide a seamless experience across various devices.
 
 ## Technologies Used
 
-- **Frontend:** HTML5, CSS3, JavaScript
-- **Backend:** [firebase]
+- **Frontend:** HTML5, CSS3, JavaScript ,React , Tailwind, DaisyUI
+- **Backend:** [firebase,Express,Node]
 - **Database:** [Mongodb]
 - **Hosting:** [Netlify]
 - **Version Control:** Git, GitHub
